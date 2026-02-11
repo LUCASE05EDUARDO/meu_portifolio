@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Lucas Eduardo | Projetos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+    --bg: #0a0f1c;
+    --card: #111827;
+    --primary: #3b82f6;
+    --accent: #22d3ee;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background: linear-gradient(180deg, #020617, #0a0f1c);
+    color: var(--text);
+}
+
+header {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.4em;
+}
+
+header p {
+    color: var(--muted);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 22px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #020617;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: var(--card);
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.7s ease;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card h3 {
+    color: var(--primary);
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 0.95em;
+}
+
+.tech {
+    margin-top: 10px;
+}
+
+.tech span {
+    display: inline-block;
+    margin: 5px 5px 0 0;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(59,130,246,0.15);
+    border: 1px solid rgba(59,130,246,0.4);
+    font-size: 0.8em;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: var(--muted);
+    background-color: #020617;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🚀 Meus Projetos</h1>
+    <p>Projetos desenvolvidos na área de Tecnologia da Informação</p>
+    <a class="btn" href="index.html">⬅ Voltar ao Portfólio</a>
+</header>
+
+<section>
+
+<div class="grid">
+
+    <div class="card">
+        <h3>🔐 Projeto de Pentest</h3>
+        <p>
+            Simulação prática de testes de invasão utilizando Nmap e análise de vulnerabilidades
+            em ambiente controlado.
+        </p>
+        <div class="tech">
+            <span>Nmap</span>
+            <span>Linux</span>
+            <span>Segurança</span>
+        </div>
+        <br>
+        <a class="btn" href="#" target="_blank">Ver no GitHub</a>
+    </div>
+
+    <div class="card">
+        <h3>💻 Sistema em Java</h3>
+        <p>
+            Aplicação desenvolvida em Java utilizando VS Code,
+            com foco em lógica de programação e estrutura de dados.
+        </p>
+        <div class="tech">
+            <span>Java</span>
+            <span>VS Code</span>
+        </div>
+        <br>
+        <a class="btn" href="#" target="_blank">Ver no GitHub</a>
+    </div>
+
+    <div class="card">
+        <h3>🌐 Portfólio Web</h3>
+        <p>
+            Desenvolvimento de site pessoal utilizando HTML e CSS
+            com layout responsivo e animações suaves.
+        </p>
+        <div class="tech">
+            <span>HTML</span>
+            <span>CSS</span>
+        </div>
+        <br>
+        <a class="btn" href="#" target="_blank">Ver Projeto</a>
+    </div>
+
+</div>
+
+</section>
+
+<footer>
+    © 2026 • Lucas Eduardo • Projetos de TI
+</footer>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, { threshold: 0.2 });
+
+cards.forEach(card => observer.observe(card));
+</script>
+
+</body>
+</html>
