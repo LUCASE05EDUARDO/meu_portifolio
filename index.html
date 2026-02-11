@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Lucas Eduardo | Portfólio TI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+    --bg: #0a0f1c;
+    --card: #111827;
+    --primary: #3b82f6;
+    --accent: #22d3ee;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background: linear-gradient(180deg, #020617, #0a0f1c);
+    color: var(--text);
+}
+
+/* HEADER */
+header {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.foto {
+    width: 160px;
+    height: 160px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--primary);
+    box-shadow: 0 0 40px rgba(59,130,246,0.6);
+    transition: transform 0.4s ease;
+}
+
+.foto:hover {
+    transform: scale(1.05);
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(1.1) saturate(1.1);
+}
+
+header h1 {
+    margin-top: 25px;
+    font-size: 2.6em;
+}
+
+header p {
+    max-width: 720px;
+    margin: 15px auto;
+    color: var(--muted);
+    font-size: 1.1em;
+}
+
+/* BOTÃO */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 26px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #020617;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(34,211,238,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(34,211,238,0.5);
+}
+
+/* SECTIONS */
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+h2 {
+    color: var(--primary);
+    border-left: 5px solid var(--primary);
+    padding-left: 12px;
+    margin-bottom: 30px;
+}
+
+/* CARDS */
+.card {
+    background-color: var(--card);
+    padding: 28px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.7s ease;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* TAGS */
+.tags span {
+    display: inline-block;
+    margin: 6px;
+    padding: 10px 16px;
+    border-radius: 25px;
+    background: rgba(59,130,246,0.15);
+    border: 1px solid rgba(59,130,246,0.4);
+    font-size: 0.9em;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: var(--muted);
+    background-color: #020617;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="foto">
+        <img src="perfil.png.png" alt="Foto de Lucas Eduardo">
+    </div>
+
+    <h1>Lucas Eduardo Friedrich Schmeling</h1>
+    <p>
+        Profissional de TI com experiência em suporte técnico, segurança da informação,
+        infraestrutura, vendas técnicas e sistemas computacionais.
+    </p>
+
+    <a class="btn" href="curriculo.pdf" download>⬇ Baixar Currículo</a>
+</header>
+
+<section>
+    <h2>👨‍💻 Perfil Profissional</h2>
+    <div class="card">
+        Busco uma oportunidade na área para
+aplicar meus conhecimentos,
+desenvolver novas habilidades e
+crescer junto à equipe. Sou
+comprometido, rápido para aprender
+e motivado a entregar resultados
+reais
+    </div>
+</section>
+<section>
+    <h2>🛠️ Competências Técnicas</h2>
+    <div class="card tags">
+        <span>Windows • Linux • macOS</span>
+        <span>Suporte Técnico</span>
+        <span>Segurança da Informação</span>
+        <span>Pentest • Nmap</span>
+        <span>Administração de Servidores</span>
+        <span>Manutenção de Computadores</span>
+        <span>JavaScript</span>
+        <span>Python</span>
+        <span>TypeScript</span>
+        <span>Java</span>
+        <span>VS Code</span>
+    </div>
+</section>
+<section>
+    <h2>🧠 Expertise</h2>
+
+    <div class="card tags">
+        <span>Administrador de Servidores</span>
+        <span>Manutenção de Computadores</span>
+        <span>Segurança da Informação</span>
+        <span>Editor de Vídeos</span>
+        <span>Editor de Fotos</span>
+        <span>Fotógrafo</span>
+        <span>Videomaker</span>
+        <span>Design de Logomarcas</span>
+        <span>Consultor de Vendas</span>
+        <span>Marketing Digital</span>
+    </div>
+</section>
+
+<section>
+    <h2>🎓 Educação</h2>
+
+    <div class="card">
+        <ul>
+            <li>
+                <strong>Ciência da Computação – Bacharelado</strong><br>
+                UNOPAR<br>
+                <em>Em andamento</em>
+            </li>
+
+            <li>
+                <strong>Técnico em Eletrotécnica</strong><br>
+                CAIC – Centro de Formação Técnica<br>
+                <em>Conclusão: Novembro / 2023</em>
+            </li>
+
+            <li>
+                <strong>Ensino Médio Completo</strong><br>
+                E.E.E. Básica Profº Willy Roos / Escola Politécnica Brasileira<br>
+                <em>Conclusão: Dezembro / 2022</em>
+            </li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <ul>
+            <li>
+                <strong>Curso Auxiliar Administrativo</strong><br>
+                Império Educação Profissional<br>
+                <em>Dezembro / 2019</em>
+            </li>
+
+            <li>
+                <strong>Gestão de Pré-Vendas</strong><br>
+                Academia Exact<br>
+                <em>Janeiro / 2023</em>
+            </li>
+
+            <li>
+                <strong>Gestão de Vendas Consultivas</strong><br>
+                Academia Exact<br>
+                <em>Janeiro / 2023</em>
+            </li>
+
+            <li>
+                <strong>Introdução ao Pentest na Prática</strong><br>
+                DESEC<br>
+                <em>Janeiro / 2023</em>
+            </li>
+
+            <li>
+                <strong>Curso de Brigadista de Incêndio</strong><br>
+                Renova Sistemas<br>
+                <em>Agosto / 2023</em>
+            </li>
+        </ul>
+    </div>
+</section>
+<section>
+    <h2>💼 Experiência Profissional</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <strong>Supervisor de Vendas</strong><br>
+            <em>Casa do Celular – Agudo/RS</em><br>
+            Abril / 2021 – Atual
+            <p>
+                Atuação como supervisor de vendas, vendedor, organização de estoque,
+                serviços de design, gerenciamento de redes sociais, marketing digital
+                e assistência técnica em equipamentos e sistemas.
+            </p>
+        </div>
+
+        <div class="card">
+            <strong>Soldado</strong><br>
+            <em>Exército Brasileiro – Santa Maria/RS</em><br>
+            Março / 2022 – Janeiro / 2023
+            <p>
+                Atividades em suporte técnico, manutenção de computadores,
+                administração de servidores, gerenciador de sistemas,
+                motorista e rádio operador.
+            </p>
+        </div>
+
+        <div class="card">
+            <strong>Auxiliar de Depósito</strong><br>
+            <em>Cooperativa Agrícola – Agudo/RS</em><br>
+            Fevereiro / 2020 – Abril / 2021
+            <p>
+                Reposição e controle de estoque, auxílio em vendas
+                e emissão de notas fiscais.
+            </p>
+        </div>
+
+        <div class="card">
+            <strong>Videomaker / Designer</strong><br>
+            <em>Atuação Autônoma – Santa Maria/RS</em><br>
+            Janeiro / 2017 – Janeiro / 2020
+            <p>
+                Edição de vídeos, fotografia, design gráfico, criação de logomarcas,
+                direção de arte e gerenciamento de redes sociais.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<section>
+    <h2>📞 Contato</h2>
+    <div class="card">
+        📧 lucasnegoh@outlook.com<br>
+        📱 (55) 99900-5237<br>
+        📍 Agudo – RS
+    </div>
+</section>
+
+<footer>
+    © 2026 • Lucas Eduardo • Portfólio TI
+</footer>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, { threshold: 0.2 });
+
+cards.forEach(card => observer.observe(card));
+</script>
+
+</body>
+</html>
